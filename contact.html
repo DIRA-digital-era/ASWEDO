@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="aswedo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact ASWEDO Cameroon — reach our team, enquire about programs, volunteering, partnerships, or donations.">
+    <link rel="canonical" href="https://aswedo-cameroon.org/contact.html">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASWEDO Cameroon">
+    <meta property="og:title" content="Contact Us - ASWEDO Cameroon">
+    <meta property="og:description"
+        content="Get in touch with ASWEDO Cameroon for program inquiries, partnerships, volunteering or donations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aswedo-cameroon.org/contact.html">
+    <meta property="og:image" content="https://aswedo-cameroon.org/og-image.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - ASWEDO Cameroon">
+    <meta name="twitter:description"
+        content="Get in touch with ASWEDO Cameroon for program inquiries, partnerships, volunteering or donations.">
+    <meta name="twitter:image" content="https://aswedo-cameroon.org/og-image.jpg">
+    <script type="application/ld+json">{
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Contact Us - ASWEDO Cameroon",
+            "description": "Contact ASWEDO Cameroon — reach our team, enquire about programs, volunteering, partnerships, or donations.",
+            "url": "https://aswedo-cameroon.org/contact.html"
+        }</script>
+    <title>Contact Us - ASWEDO Cameroon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-white: #ffffff;
+            --secondary-purple: #f79ead;
+            --purple-light: #a76973;
+            --purple-dark: #a76973;
+            --dark-text: #333333;
+            --light-text: #666666;
+            --background-light: #f8f9fa;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--primary-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-purple);
+            transition: var(--transition);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-purple);
+        }
+
+        .nav-link.active {
+            color: var(--secondary-purple);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary-purple);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-purple);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--secondary-purple);
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            position: relative;
+            padding: 140px 0 100px;
+            overflow: hidden;
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)),
+                url("page_header.jpg") no-repeat center/cover;
+
+            animation: fadeHeader 1.2s ease forwards;
+        }
+
+        /* SLIDES */
+        .hero-slides {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        /* CONTENT */
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-white);
+            margin-bottom: 1rem;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .page-title span {
+            color: var(--secondary-purple);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--primary-white);
+            opacity: 0.9;
+            animation: fadeUp 1.3s ease forwards;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeHeader {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: var(--background-light);
+            padding: 1rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .breadcrumb-content {
+            display: flex;
+            list-style: none;
+        }
+
+        .breadcrumb-item {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: var(--light-text);
+        }
+
+        .breadcrumb-item a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb-item a:hover {
+            color: var(--secondary-purple);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--secondary-purple);
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+            text-align: center;
+        }
+
+        .section-title span {
+            color: var(--secondary-purple);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: var(--primary-white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-purple);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .contact-text {
+            color: var(--light-text);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-details i {
+            color: var(--secondary-purple);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        /* Form Styles */
+        .form-container {
+            background: var(--primary-white);
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark-text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--secondary-purple);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: var(--primary-white);
+            transition: var(--transition);
+        }
+
+        .form-select:focus {
+            border-color: var(--secondary-purple);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.2);
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 0 0 5rem;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            height: 450px;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--background-light);
+            padding: 5rem 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--primary-white);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--secondary-purple);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 2rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-purple);
+            color: var(--primary-white);
+            box-shadow: 0 4px 15px rgba(126, 87, 194, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--purple-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(126, 87, 194, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--secondary-purple);
+            border: 2px solid var(--secondary-purple);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-purple);
+            color: var(--primary-white);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-text);
+            color: var(--primary-white);
+            padding: 4rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--secondary-purple);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-purple);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--secondary-purple);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--primary-white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-purple);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: var(--primary-white);
+                flex-direction: column;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 2rem 0;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                padding: 2rem;
+            }
+
+            .map-container {
+                height: 350px;
+            }
+
+            .faq-question {
+                padding: 1.25rem 1.5rem;
+                font-size: 1.1rem;
+            }
+
+            .faq-answer {
+                padding: 0 1.5rem;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 0 1.5rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<style>
+    .logo-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .logo-image {
+        width: 50px;
+        height: 50px;
+        background-image: url('aswedo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(126, 87, 194, 0.3);
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--secondary-purple);
+        line-height: 1.0;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo-image"></div>
+                    <div class="logo-text">ASWEDO<br>Cameroon</div>
+                </div>
+
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="work.html" class="nav-link">Our Work</a></li>
+                        <li><a href="involve.html" class="nav-link">Get Involved</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="hero-slides">
+
+            <div class="hero-slide active" style="background-image: url('health_campaign.jpg');"></div>
+
+        </div>
+        <div class="container">
+            <div  class="fade-text">
+                <h1 class="page-title">Contact <span>Us</span></h1>
+                <p class="page-subtitle">Get in touch with ASWEDO Cameroon. We're here to answer your questions and welcome
+                    your involvement in our mission.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-content">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Contact</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <p class="section-subtitle">We'd love to hear from you. Choose the most convenient way to reach out to us.
+            </p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="contact-title">Our Location</h3>
+                        <p class="contact-text">Visit our office in Buea to learn more about our work and how you can
+                            get involved.</p>
+                        <ul class="contact-details">
+                            <li>
+                                <i class="fas fa-location-dot"></i>
+                                <div>Bamenda, Northwest Region<br>Cameroon</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="contact-title">Phone & Email</h3>
+                        <p class="contact-text">Reach out to us directly for immediate assistance or inquiries.</p>
+                        <ul class="contact-details">
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>+237 670 293 661</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>aswedongo@gmail.com</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>Mon - Fri: 8:00 AM - 5:00 PM</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="contact-title">Program Inquiries</h3>
+                        <p class="contact-text">Interested in joining our programs? Contact our program coordinators.
+                        </p>
+                        <ul class="contact-details">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>programs@aswedo-cameroon.org</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>aswedongo@gmail.com</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3 class="form-title">Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" class="form-select" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="programs">Program Information</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="donation">Donation Information</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Our <span>Location</span></h2>
+            <p class="section-subtitle">Visit us at our office in Buea. We're always happy to welcome visitors and
+                discuss our work.</p>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.272899172292!2d9.232722974852255!3d4.153780395908602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061318376d518c3%3A0x5bf0a8e7c8c0734e!2sBuea%2C%20Cameroon!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus"
+                    class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+            <p class="section-subtitle">Find quick answers to common questions about ASWEDO Cameroon and our programs.
+            </p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can I volunteer with ASWEDO Cameroon?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        You can volunteer with ASWEDO by filling out our volunteer interest form on the Get Involved
+                        page, contacting us directly via email or phone, or visiting our office in Buea. We welcome
+                        volunteers with various skills including training, mentoring, IT support, and event
+                        organization.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What types of programs does ASWEDO offer for women?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We offer comprehensive women's entrepreneurship programs that include business skills training,
+                        financial literacy education, mentorship opportunities, and support for starting and growing
+                        small businesses. Our programs are designed to empower women economically and foster sustainable
+                        development.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can youth join your empowerment programs?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Youth can join our programs by submitting an inquiry through our website, contacting our program
+                        coordinators directly, or visiting our office. We offer apprenticeships in tailoring,
+                        hairdressing, ICT, and agriculture, along with life skills and career guidance workshops.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does ASWEDO accept donations?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        While our current focus is on non-financial support through volunteering and partnerships, we do
+                        accept in-kind donations such as educational materials, equipment for our training programs, and
+                        other resources that directly support our initiatives. Please contact us to discuss potential
+                        donations.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can organizations partner with ASWEDO?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Organizations can partner with us through program co-design and implementation, employee
+                        volunteering, skills sharing, resource mobilization, and advocacy campaigns. We work with
+                        corporations, NGOs, educational institutions, and community organizations. Contact our
+                        partnership coordinator to discuss collaboration opportunities.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ASWEDO Cameroon</h3>
+                    <p>Empowering women and youth through entrepreneurship and skills development for sustainable
+                        community growth across Cameroon.</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/share/p/1CJUBWfvwP/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ASWEDO2/status/2019776695968923849?s=20"><i
+                                class="fab fa-twitter"></i></a>
+                        <a
+                            href="https://www.instagram.com/p/DUawhwMAnG3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="involve.html">Get Involved</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Bamenda, Northwest Region<br>Cameroon</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>+237 670 293 661</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>aswedongo@gmail.com</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>Mon - Fri: 8:00 AM - 5:00 PM</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ASWEDO Cameroon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+      <script>
+        const slides = document.querySelectorAll('.hero-slide');
+        const text = document.querySelector('.fade-text');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.add('active');
+
+            // Restart text animation
+            text.classList.remove('fade-text');
+            void text.offsetWidth; // trigger reflow
+            text.classList.add('fade-text');
+
+        }, 3000);
+    </script>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

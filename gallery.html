@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="aswedo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore ASWEDO Cameroon's gallery: photos & videos from events, trainings, community activities, and success stories.">
+    <link rel="canonical" href="https://aswedo-cameroon.org/gallery.html">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASWEDO Cameroon">
+    <meta property="og:title" content="Gallery - ASWEDO Cameroon">
+    <meta property="og:description"
+        content="Photos & videos from ASWEDO events, trainings and community activities showcasing our impact.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aswedo-cameroon.org/gallery.html">
+    <meta property="og:image" content="https://aswedo-cameroon.org/og-image.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery - ASWEDO Cameroon">
+    <meta name="twitter:description"
+        content="Photos & videos from ASWEDO events, trainings and community activities showcasing our impact.">
+    <meta name="twitter:image" content="https://aswedo-cameroon.org/og-image.jpg">
+    <script type="application/ld+json">{
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Gallery - ASWEDO Cameroon",
+            "description": "Explore ASWEDO Cameroon's gallery: photos & videos from events, trainings, community activities, and success stories.",
+            "url": "https://aswedo-cameroon.org/gallery.html"
+        }</script>
+    <title>Gallery - ASWEDO Cameroon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+          :root {
+            --primary-white: #ffffff;
+            --secondary-purple: #f79ead;
+            --purple-light:#a76973;
+            --purple-dark: #a76973;
+            --dark-text: #333333;
+            --light-text: #666666;
+            --background-light: #f8f9fa;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--primary-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-purple);
+            transition: var(--transition);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-purple);
+        }
+
+        .nav-link.active {
+            color: var(--secondary-purple);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary-purple);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-purple);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--secondary-purple);
+        }
+
+               /* PAGE HEADER */
+        .page-header {
+            position: relative;
+            padding: 140px 0 100px;
+            overflow: hidden;
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)),
+                url("page_header.jpg") no-repeat center/cover;
+
+            animation: fadeHeader 1.2s ease forwards;
+        }
+
+        /* SLIDES */
+        .hero-slides {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        /* CONTENT */
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-white);
+            margin-bottom: 1rem;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .page-title span {
+            color: var(--secondary-purple);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--primary-white);
+            opacity: 0.9;
+            animation: fadeUp 1.3s ease forwards;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeHeader {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: var(--background-light);
+            padding: 1rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .breadcrumb-content {
+            display: flex;
+            list-style: none;
+        }
+
+        .breadcrumb-item {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: var(--light-text);
+        }
+
+        .breadcrumb-item a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb-item a:hover {
+            color: var(--secondary-purple);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--secondary-purple);
+            font-weight: 500;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .navigation a{
+            margin: 10px 10px;
+            padding: 8px 16px;
+            background-color: var(--secondary-purple);
+            color: var(--primary-white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Gallery Sections */
+        .gallery-section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+            text-align: center;
+        }
+
+        .section-title span {
+            color: var(--secondary-purple);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            margin: 4rem 0 2rem;
+            color: var(--dark-text);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--purple-light);
+        }
+
+        .category-title span {
+            color: var(--secondary-purple);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            position: relative;
+            height: 250px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-white);
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-image span {
+            z-index: 2;
+            position: relative;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .video-item {
+            position: relative;
+        }
+
+        .video-item .gallery-image::before {
+            content: '\f04b';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.9);
+            z-index: 3;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: var(--primary-white);
+            padding: 1.5rem 1rem 1rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .gallery-item:hover .item-overlay {
+            transform: translateY(0);
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .item-date {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            overflow: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-video {
+            width: 80%;
+            height: auto;
+            max-width: 800px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--primary-white);
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--purple-light);
+        }
+
+        .modal-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: var(--primary-white);
+            padding: 1rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-text);
+            color: var(--primary-white);
+            padding: 4rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--secondary-purple);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-purple);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--secondary-purple);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--primary-white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-purple);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: var(--primary-white);
+                flex-direction: column;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 2rem 0;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .category-title {
+                font-size: 1.7rem;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navigation {
+                flex-direction: column;
+            }
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-video {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<style>
+    .logo-section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .logo-image{
+        width: 50px;
+        height: 50px;
+        background-image: url('aswedo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(126, 87, 194, 0.3);
+    }
+
+    .logo-text{
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--secondary-purple);
+        line-height: 1.0;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo-image"></div>
+                    <div class="logo-text">ASWEDO<br>Cameroon</div>
+                </div>
+
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="work.html" class="nav-link">Our Work</a></li>
+                        <li><a href="involve.html" class="nav-link">Get Involved</a></li>
+                        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="hero-slides">
+
+            <div class="hero-slide active" style="background-image: url('gallery_hero.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('donation1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('donation6.jpg');"></div>
+
+        </div>
+        <div class="container">
+            <div class="fade-text">
+                <h1 class="page-title">Our <span>Gallery</span></h1>
+                <p class="page-subtitle">Explore our journey through photos and videos of events, programs, and community
+                    activities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-content">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Gallery</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Visual <span>Journey</span></h2>
+            <p class="section-subtitle">A collection of moments that capture the impact of our work and the spirit of
+                our community</p>
+            <div class="navigation"><a href="#one">Donations & Support</a> <a href="#two">Training & Workshops</a> <a
+                    href="#three">Community events</a> <a href="#four">Volunteer Activities</a></div>
+
+            <!-- Donations & Support Category -->
+            <h3 class="category-title" id="one">Donations & <span>Support</span></h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="donation1.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 2023</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="donation2.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">January 2024</div>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="donation3.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">September 2024</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="donation4.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">July 2023</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="donation5.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">September 2024</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="donation6.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">May 2023</div>
+                    </div>
+
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="donation7.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">September 2021</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="donation3.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">September 2021</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Training & Workshops Category -->
+            <h3 class="category-title" id="two">Training & <span>Workshops</span></h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="training1.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">April 2020</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="training2.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">April 2020</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="training3.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">April 2020</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="training4.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">April 2020</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="training5.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">April 2020</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Community Events Category -->
+            <h3 class="category-title" id="three">Community <span>Events</span></h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="community1.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 8, 2025</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="community2.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">December 2025</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="community3.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">July 2024</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="community4.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 8, 2024</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="community5.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">November 2023</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Volunteer Activities Category -->
+            <h3 class="category-title" id="four">Volunteer <span>Activities</span></h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="volunteer1.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 2023</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="volunteer2.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 2023</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="volunteer3.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 2023</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="volunteer4.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 2023</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="volunteer5.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 2023</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image" data-img="volunteer6.jpg">
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">March 2023</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for enlarged view -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage" src="">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- Modal for videos -->
+    <div id="videoModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <video class="modal-content modal-video" id="modalVideo" controls>
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="modal-caption" id="videoCaption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ASWEDO Cameroon</h3>
+                    <p>Empowering women and youth through entrepreneurship and skills development for sustainable
+                        community growth across Cameroon.</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/share/p/1CJUBWfvwP/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ASWEDO2/status/2019776695968923849?s=20"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/p/DUawhwMAnG3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="involve.html">Get Involved</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Bamenda, Northwest Region<br>Cameroon</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>+237 670 293 661</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>aswedongo@gmail.com</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>Mon - Fri: 8:00 AM - 5:00 PM</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ASWEDO Cameroon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+      <script>
+        const slides = document.querySelectorAll('.hero-slide');
+        const text = document.querySelector('.fade-text');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.add('active');
+
+            // Restart text animation
+            text.classList.remove('fade-text');
+            void text.offsetWidth; // trigger reflow
+            text.classList.add('fade-text');
+
+        }, 3000);
+    </script>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        //Set gallery images from data attributes
+        document.querySelectorAll('.gallery-image').forEach(imgDiv => {
+            const imgSrc = imgDiv.getAttribute('data-img');
+            if (imgSrc) {
+                imgDiv.style.backgroundImage = `url('${imgSrc}')`;
+            }
+        });
+
+        // Modal functionality
+        const imageModal = document.getElementById('imageModal');
+        const videoModal = document.getElementById('videoModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalCaption = document.getElementById('modalCaption');
+        const videoCaption = document.getElementById('videoCaption');
+        const closeButtons = document.querySelectorAll('.close-modal');
+
+        // Open image modal
+        document.querySelectorAll('.gallery-item:not(.video-item)').forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('.gallery-image').getAttribute('data-img');
+                modalImage.src = imgSrc;
+                modalCaption.textContent = `${date}`;
+                imageModal.classList.add('active');
+            });
+        });
+
+
+        // Close modals
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                imageModal.classList.remove('active');
+                videoModal.classList.remove('active');
+                modalVideo.pause();
+            });
+        });
+
+        // Close modals when clicking outside the content
+        window.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('active');
+            }
+            if (e.target === videoModal) {
+                videoModal.classList.remove('active');
+                modalVideo.pause();
+            }
+        });
+    </script>
+</body>
+
+</html>

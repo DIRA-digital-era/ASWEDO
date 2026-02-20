@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="aswedo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about ASWEDO Cameroon's mission, history, team, and impact in empowering women and youth across Cameroon since 2009.">
+    <link rel="canonical" href="https://aswedo-cameroon.org/about.html">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="ASWEDO Cameroon">
+    <meta property="og:title" content="About Us - ASWEDO Cameroon">
+    <meta property="og:description"
+        content="Learn about our mission, values, team, and programs that empower women and youth in Cameroon.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://aswedo-cameroon.org/about.html">
+    <meta property="og:image" content="https://aswedo-cameroon.org/og-image.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - ASWEDO Cameroon">
+    <meta name="twitter:description"
+        content="Learn about our mission, values, team, and programs that empower women and youth in Cameroon.">
+    <meta name="twitter:image" content="https://aswedo-cameroon.org/og-image.jpg">
+    <script type="application/ld+json">{
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "About Us - ASWEDO Cameroon",
+            "description": "Learn about ASWEDO Cameroon's mission, history, team, and impact in empowering women and youth across Cameroon since 2009.",
+            "url": "https://aswedo-cameroon.org/about.html"
+        }</script>
+    <title>About Us - ASWEDO Cameroon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-white: #ffffff;
+            --secondary-purple: #f79ead;
+            --purple-light: #a76973;
+            --purple-dark: #a76973;
+            --dark-text: #333333;
+            --light-text: #666666;
+            --background-light: #f8f9fa;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--primary-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-purple);
+            transition: var(--transition);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-purple);
+        }
+
+        .nav-link.active {
+            color: var(--secondary-purple);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary-purple);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-purple);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--secondary-purple);
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            position: relative;
+            padding: 140px 0 100px;
+            overflow: hidden;
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)),
+                url("page_header.jpg") no-repeat center/cover;
+
+            animation: fadeHeader 1.2s ease forwards;
+        }
+
+        /* SLIDES */
+        .hero-slides {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        /* CONTENT */
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-white);
+            margin-bottom: 1rem;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .page-title span {
+            color: var(--secondary-purple);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--primary-white);
+            opacity: 0.9;
+            animation: fadeUp 1.3s ease forwards;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeHeader {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: var(--background-light);
+            padding: 1rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .breadcrumb-content {
+            display: flex;
+            list-style: none;
+        }
+
+        .breadcrumb-item {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: var(--light-text);
+        }
+
+        .breadcrumb-item a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb-item a:hover {
+            color: var(--secondary-purple);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--secondary-purple);
+            font-weight: 500;
+        }
+
+        /* About Sections */
+        .about-section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .section-title span {
+            color: var(--secondary-purple);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--light-text);
+        }
+
+        .story-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .story-image {
+            height: 400px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
+                url("story_image.jpg") no-repeat top 15% center/cover;
+            ;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-white);
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-image span {
+            z-index: 2;
+            position: relative;
+            font-weight: 600;
+        }
+
+        /* Mission & Vision */
+        .mission-vision {
+            background-color: var(--background-light);
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .mv-card {
+            background: var(--primary-white);
+            border-radius: 10px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .mv-icon {
+            font-size: 3rem;
+            color: var(--secondary-purple);
+            margin-bottom: 1.5rem;
+        }
+
+        .mv-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+
+        .mv-text {
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
+        /* Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: var(--primary-white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(126, 87, 194, 0.15);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(126, 87, 194, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition);
+        }
+
+        .value-card:hover .value-icon {
+            background-color: var(--secondary-purple);
+            transform: scale(1.1);
+        }
+
+        .value-icon i {
+            font-size: 2rem;
+            color: var(--secondary-purple);
+            transition: var(--transition);
+        }
+
+        .value-card:hover .value-icon i {
+            color: var(--primary-white);
+        }
+
+        .value-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .value-text {
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
+        /* Team Section */
+        .team {
+            background-color: var(--background-light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .team-card {
+            background: var(--primary-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .team-image {
+            height: 280px;
+            background-color: var(--purple-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-white);
+            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, pink, #f79ead);
+            ;
+        }
+
+        .team-image span {
+            z-index: 2;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .team-content {
+            padding: 2rem;
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-text);
+        }
+
+        .team-role {
+            color: var(--secondary-purple);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .team-bio {
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
+        /* Approach Section */
+        .approach-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            counter-reset: step-counter;
+        }
+
+        .approach-step {
+            position: relative;
+            padding-left: 5rem;
+        }
+
+        .approach-step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-purple);
+            color: var(--primary-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .step-text {
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
+        /* Partners Section */
+        .partners {
+            background-color: var(--background-light);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .partner-card {
+            background: var(--primary-white);
+            border-radius: 10px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .partner-logo {
+            width: 120px;
+            height: 80px;
+            background-color: var(--purple-light);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-white);
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .partner-name {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-text);
+        }
+
+        .partner-type {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        /* Governance Section */
+        .governance-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .governance-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--light-text);
+        }
+
+        .governance-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-text);
+            color: var(--primary-white);
+            padding: 4rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--secondary-purple);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-purple);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--secondary-purple);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--primary-white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-purple);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
+
+            .story-content,
+            .governance-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .story-image,
+            .governance-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: var(--primary-white);
+                flex-direction: column;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 2rem 0;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .approach-step {
+                padding-left: 4rem;
+            }
+
+            .approach-step::before {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .mv-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .approach-step {
+                padding-left: 0;
+                padding-top: 4rem;
+            }
+
+            .approach-step::before {
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<style>
+    .logo-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .logo-image {
+        width: 50px;
+        height: 50px;
+        background-image: url('aswedo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(126, 87, 194, 0.3);
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--secondary-purple);
+        line-height: 1.0;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo-image"></div>
+                    <div class="logo-text">ASWEDO<br>Cameroon</div>
+                </div>
+
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link active">About Us</a></li>
+                        <li><a href="work.html" class="nav-link">Our Work</a></li>
+                        <li><a href="involve.html" class="nav-link">Get Involved</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="hero-slides">
+
+            <div class="hero-slide active" style="background-image: url('about_hero.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('volunteer5.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('volunteer4.jpg');"></div>
+
+        </div>
+
+        <div class="container">
+            <div class="fade-text">
+                <h1 class="page-title">About <span>ASWEDO Cameroon</span></h1>
+                <p class="page-subtitle">Learn about our mission, values, team, and approach to empowering women and youth
+                    across Cameroon</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-content">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">About Us</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Our <span>Story</span></h2>
+            <p class="section-subtitle">Founded in 2009, ASWEDO Cameroon has been at the forefront of women's
+                empowerment and youth development initiatives across the Southwest Region of Cameroon.</p>
+
+            <div class="story-content">
+                <div class="story-text">
+                    <p>ASWEDO (Association for the Support of Women's Entrepreneurship and Development) was established
+                        in response to the growing need for sustainable economic opportunities for women and youth in
+                        Cameroon. Our founders recognized that empowering women with entrepreneurial skills and
+                        providing youth with vocational training would create lasting positive change in communities.
+                    </p>
+                    <p>Over the past 15 years, we have grown from a small community initiative to a recognized
+                        non-governmental organization impacting thousands of lives across multiple regions. Our work
+                        focuses on addressing the root causes of poverty and inequality by equipping women and youth
+                        with practical skills, knowledge, and resources.</p>
+                    <p>Based in Buea, we have expanded our reach to remote communities, adapting our programs to meet
+                        local needs while maintaining our core mission of fostering sustainable development through
+                        entrepreneurship and skills training.</p>
+                </div>
+                <div class="story-image">
+                    <span>ASWEDO Team in Community</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="about-section mission-vision">
+        <div class="container">
+            <h2 class="section-title">Our <span>Mission & Vision</span></h2>
+            <p class="section-subtitle">Guided by our core purpose and aspirations for the future</p>
+
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="mv-title">Our Mission</h3>
+                    <p class="mv-text">To empower women and youth through entrepreneurship training, skills development,
+                        and community support initiatives that foster economic independence, social inclusion, and
+                        sustainable development in Cameroon.</p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="mv-title">Our Vision</h3>
+                    <p class="mv-text">We envision a Cameroon where all women and youth have equal opportunities to
+                        realize their potential, contribute to their communities, and participate fully in the economic
+                        and social development of the nation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Our <span>Core Values</span></h2>
+            <p class="section-subtitle">The principles that guide everything we do</p>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3 class="value-title">Gender Equality</h3>
+                    <p class="value-text">We believe in equal rights, responsibilities, and opportunities for women and
+                        men, girls and boys.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">Integrity</h3>
+                    <p class="value-text">We maintain honesty, transparency, and accountability in all our operations
+                        and relationships.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="value-title">Community Focus</h3>
+                    <p class="value-text">We work with and for communities, respecting local knowledge and promoting
+                        community ownership.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p class="value-text">We continuously seek creative solutions to address development challenges in
+                        our communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="about-section team">
+        <div class="container">
+            <h2 class="section-title">Our <span>Team</span></h2>
+            <p class="section-subtitle">Meet the dedicated individuals driving our mission forward</p>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Lilian Akwen</h3>
+                        <span class="team-role">Founder and Coordinator</span>
+                        <p class="team-bio">Leads community-driven initiatives focused on empowerment, inclusion, and
+                            long-term impact.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Mokom Noella</h3>
+                        <span class="team-role">GBV Field Coordinator</span>
+                        <p class="team-bio">Oversees GBV response and prevention efforts within local communities,
+                            ensuring safe access to support.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Bih Jasmine</h3>
+                        <span class="team-role">Youth Coordinator</span>
+                        <p class="team-bio">Engages young people in community projects, life skills training, and
+                            leadership development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Martin Wanki</h3>
+                        <span class="team-role">Education Empowerment Officer</span>
+                        <p class="team-bio">Facilitates access to learning opportunities and supports education-based
+                            outreach in underserved areas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Mbah Patrick</h3>
+                        <span class="team-role">Social Worker</span>
+                        <p class="team-bio">Delivers frontline support and links vulnerable community members to
+                            essential services and care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Our <span>Approach</span></h2>
+            <p class="section-subtitle">How we create sustainable impact in communities</p>
+
+            <div class="approach-steps">
+                <div class="approach-step">
+                    <h3 class="step-title">Community-Led Development</h3>
+                    <p class="step-text">We work with communities to identify their specific needs and priorities,
+                        ensuring our programs are relevant and sustainable. Community members actively participate in
+                        planning, implementation, and evaluation.</p>
+                </div>
+
+                <div class="approach-step">
+                    <h3 class="step-title">Hands-On Training</h3>
+                    <p class="step-text">Our training programs emphasize practical skills that can be immediately
+                        applied. We combine classroom learning with real-world practice to ensure participants gain
+                        confidence and competence.</p>
+                </div>
+
+                <div class="approach-step">
+                    <h3 class="step-title">Holistic Support</h3>
+                    <p class="step-text">Beyond skills training, we provide mentorship, networking opportunities, and
+                        access to resources that help women and youth overcome barriers to success.</p>
+                </div>
+
+                <div class="approach-step">
+                    <h3 class="step-title">Sustainable Impact</h3>
+                    <p class="step-text">We focus on creating programs that continue to benefit communities long after
+                        our direct involvement ends, building local capacity and fostering self-reliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="about-section partners">
+        <div class="container">
+            <h2 class="section-title">Our <span>Partners</span></h2>
+            <p class="section-subtitle">We collaborate with organizations that share our commitment to empowerment and
+                development</p>
+
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">MINPROFF</div>
+                    <h3 class="partner-name">MINPROFF</h3>
+                    <p class="partner-type">Government Ministry</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">UNDP</div>
+                    <h3 class="partner-name">UNDP Cameroon</h3>
+                    <p class="partner-type">UN Agency</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">Plan Int.</div>
+                    <h3 class="partner-name">Plan International</h3>
+                    <p class="partner-type">International NGO</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">Local Council</div>
+                    <h3 class="partner-name">Buea Council</h3>
+                    <p class="partner-type">Local Government</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">Women's Groups</div>
+                    <h3 class="partner-name">Community Groups</h3>
+                    <p class="partner-type">Grassroots Organizations</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">Youth Network</div>
+                    <h3 class="partner-name">Youth Associations</h3>
+                    <p class="partner-type">Community Organizations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Our <span>Governance</span></h2>
+            <p class="section-subtitle">Committed to transparency and accountability in all our operations</p>
+
+            <div class="governance-content">
+                <div class="governance-text">
+                    <p>ASWEDO Cameroon is a registered non-governmental, non-profit organization under Cameroonian law.
+                        Our registration number is 0000/E.29/1111/VOL.8/ALPAS, affirming our legal status and commitment
+                        to operating with integrity.</p>
+                    <p>We are governed by a Board of Directors that provides strategic oversight and ensures we remain
+                        true to our mission. The Board comprises professionals with expertise in community development,
+                        gender issues, finance, and law.</p>
+                    <p>Our operations are guided by a comprehensive set of policies including financial management
+                        procedures, child protection policies, and gender mainstreaming guidelines. We maintain
+                        transparent financial records and undergo regular internal and external audits.</p>
+                    <p>ASWEDO is committed to accountability to our beneficiaries, partners, donors, and the communities
+                        we serve. We regularly evaluate our programs and share results with stakeholders to ensure
+                        continuous improvement and maximum impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ASWEDO Cameroon</h3>
+                    <p>Empowering women and youth through entrepreneurship and skills development for sustainable
+                        community growth across Cameroon.</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/share/p/1CJUBWfvwP/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ASWEDO2/status/2019776695968923849?s=20"><i
+                                class="fab fa-twitter"></i></a>
+                        <a
+                            href="https://www.instagram.com/p/DUawhwMAnG3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="involve.html">Get Involved</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Bamenda, Northwest Region<br>Cameroon</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>+237 670 293 661</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>aswedongo@gmail.com</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>Mon - Fri: 8:00 AM - 5:00 PM</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ASWEDO Cameroon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.hero-slide');
+        const text = document.querySelector('.fade-text');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.add('active');
+
+            // Restart text animation
+            text.classList.remove('fade-text');
+            void text.offsetWidth; // trigger reflow
+            text.classList.add('fade-text');
+
+        }, 3000);
+    </script>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
