@@ -6,30 +6,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Discover ASWEDO Cameroon's programs — women's entrepreneurship, youth empowerment, community support, and impact stories.">
+        content="Discover ASWEDO Cameroon's programs — Gender and Development, Economic Empowerment, Advocacy, and Psychosocial Support.">
     <link rel="canonical" href="https://aswedo-cameroon.org/work.html">
     <meta name="robots" content="index, follow">
-    <!-- Open Graph -->
     <meta property="og:site_name" content="ASWEDO Cameroon">
     <meta property="og:title" content="Our Work - ASWEDO Cameroon">
     <meta property="og:description"
-        content="Learn about our programs in entrepreneurship, youth training, and community support that create measurable impact.">
+        content="Learn about our programs in Gender and Development, Economic Empowerment, and Advocacy that create measurable impact.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aswedo-cameroon.org/work.html">
     <meta property="og:image" content="https://aswedo-cameroon.org/og-image.jpg">
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Our Work - ASWEDO Cameroon">
     <meta name="twitter:description"
-        content="Learn about our programs in entrepreneurship, youth training, and community support that create measurable impact.">
+        content="Explore our initiatives in Peace Building, Sensitization, and Psychosocial Support for GBV survivors.">
     <meta name="twitter:image" content="https://aswedo-cameroon.org/og-image.jpg">
-    <script type="application/ld+json">{
+    <script type="application/ld+json">
+        {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Our Work - ASWEDO Cameroon",
-            "description": "Discover ASWEDO Cameroon's programs — women's entrepreneurship, youth empowerment, community support, and impact stories.",
+            "description": "Discover ASWEDO Cameroon's programs including Gender and Development, Economic Empowerment, and GBV Support.",
             "url": "https://aswedo-cameroon.org/work.html"
-        }</script>
+        }
+    </script>
     <title>Our Work - ASWEDO Cameroon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -38,6 +38,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         :root {
@@ -76,10 +77,6 @@
             transition: var(--transition);
         }
 
-        .header-scrolled {
-            padding: 0.5rem 0;
-        }
-
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -87,17 +84,29 @@
             padding: 1.2rem 0;
         }
 
-        .logo {
+        .logo-section {
             display: flex;
+            flex-direction: row;
             align-items: center;
-            text-decoration: none;
+            gap: 0.8rem;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background-image: url('aswedo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(126, 87, 194, 0.3);
         }
 
         .logo-text {
-            font-size: 1.8rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: var(--secondary-purple);
-            transition: var(--transition);
+            line-height: 1.0;
         }
 
         .nav-menu {
@@ -115,10 +124,7 @@
             padding: 0.5rem 0;
         }
 
-        .nav-link:hover {
-            color: var(--secondary-purple);
-        }
-
+        .nav-link:hover,
         .nav-link.active {
             color: var(--secondary-purple);
         }
@@ -133,21 +139,6 @@
             background-color: var(--secondary-purple);
         }
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--secondary-purple);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
         .hamburger {
             display: none;
             cursor: pointer;
@@ -160,46 +151,7 @@
             position: relative;
             padding: 140px 0 100px;
             overflow: hidden;
-            background: linear-gradient(135deg,
-                    rgba(0, 0, 0, 0.65),
-                    rgba(0, 0, 0, 0.65)),
-                url("page_header.jpg") no-repeat center/cover;
-
-            animation: fadeHeader 1.2s ease forwards;
-        }
-
-        /* SLIDES */
-        .hero-slides {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-        }
-
-        .hero-slide {
-            position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .hero-slide::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-slide.active {
-            opacity: 1;
-        }
-
-        /* CONTENT */
-        .page-header .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("page_header.jpg") no-repeat center/cover;
         }
 
         .page-title {
@@ -207,7 +159,7 @@
             font-weight: 700;
             color: var(--primary-white);
             margin-bottom: 1rem;
-            animation: fadeUp 1s ease forwards;
+            text-align: center;
         }
 
         .page-title span {
@@ -220,73 +172,14 @@
             margin: 0 auto;
             color: var(--primary-white);
             opacity: 0.9;
-            animation: fadeUp 1.3s ease forwards;
-        }
-
-        /* ANIMATIONS */
-        @keyframes fadeHeader {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Breadcrumb */
-        .breadcrumb {
-            background-color: var(--background-light);
-            padding: 1rem 0;
-            margin-bottom: 3rem;
-        }
-
-        .breadcrumb-content {
-            display: flex;
-            list-style: none;
-        }
-
-        .breadcrumb-item {
-            margin-right: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .breadcrumb-item:not(:last-child)::after {
-            content: '/';
-            margin-left: 0.5rem;
-            color: var(--light-text);
-        }
-
-        .breadcrumb-item a {
-            color: var(--light-text);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .breadcrumb-item a:hover {
-            color: var(--secondary-purple);
-        }
-
-        .breadcrumb-item.active {
-            color: var(--secondary-purple);
-            font-weight: 500;
+            text-align: center;
         }
 
         /* Program Sections */
         .program-section {
-            padding: 5rem 0;
+            padding: 6rem 0;
+            /* Scroll padding to prevent header overlap */
+            scroll-margin-top: 80px;
         }
 
         .section-title {
@@ -319,7 +212,7 @@
         }
 
         .program-text {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.8;
             color: var(--light-text);
         }
@@ -329,10 +222,7 @@
         }
 
         .program-image {
-            height: 400px;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("program_image.jpg") no-repeat top 15% center/cover;
-            ;
+            height: 450px;
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -341,25 +231,26 @@
             font-size: 1.5rem;
             position: relative;
             overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        #one {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("program_image_one.jpg") no-repeat top 15% center/cover;
-            ;
+        .program-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
         }
-
-        #two {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("program_image_two.jpg") no-repeat top 15% center/cover;
-            ;
-        }
-
 
         .program-image span {
             z-index: 2;
             position: relative;
             font-weight: 600;
+            text-align: center;
+            padding: 0 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Program Features */
@@ -367,21 +258,22 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
-            margin-bottom: 4rem;
         }
 
         .feature-card {
             background: var(--primary-white);
             border-radius: 10px;
             padding: 2.5rem 2rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
             text-align: center;
+            border-bottom: 3px solid transparent;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--secondary-purple);
         }
 
         .feature-icon {
@@ -391,358 +283,46 @@
         }
 
         .feature-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
             color: var(--dark-text);
         }
 
         .feature-text {
             color: var(--light-text);
-            line-height: 1.7;
-        }
-
-        /* Impact Section */
-        .impact {
-            background-color: var(--background-light);
-        }
-
-        .impact-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 4rem;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            background: var(--primary-white);
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: var(--transition);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .stat-number {
-            font-size: 3.2rem;
-            font-weight: bold;
-            color: var(--secondary-purple);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .stat-label {
-            color: var(--light-text);
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-
-        .impact-stories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .story-card {
-            background: var(--primary-white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: var(--transition);
-        }
-
-        .story-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .story-image {
-            height: 220px;
-            background-color: var(--purple-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-white);
-            font-size: 1.2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .story-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, pink, #f79ead);
-        }
-
-        .story-image span {
-            z-index: 2;
-            position: relative;
-            font-weight: 600;
-        }
-
-        .story-content {
-            padding: 2rem;
-        }
-
-        .story-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark-text);
-        }
-
-        .story-text {
-            color: var(--light-text);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 5rem 0;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            height: 250px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-white);
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        #item_one {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("program_image_1.jpg") no-repeat top 15% center/cover;
-            ;
-        }
-
-        #item_two {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("program_image.jpg") no-repeat top 15% center/cover;
-            ;
-        }
-
-        #item_three {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("work_hero.jpg") no-repeat top 15% center/cover;
-            ;
-        }
-
-        #item_four {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("program_image_two.jpg") no-repeat top 15% center/cover;
-            ;
-        }
-
-        #item_five {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("graduation.jpg") no-repeat top 15% center/cover;
-            ;
-        }
-
-        #item_six {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%),
-                url("health_campaign.jpg") no-repeat top 15% center/cover;
-            ;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item span {
-            z-index: 2;
-            position: relative;
-        }
-
-        /* Annual Review */
-        .annual-review {
-            background-color: var(--background-light);
-            text-align: center;
-            padding: 4rem 0;
-        }
-
-        .review-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .review-text {
-            font-size: 1.1rem;
-            color: var(--light-text);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--secondary-purple);
-            color: var(--primary-white);
-            box-shadow: 0 4px 15px rgba(126, 87, 194, 0.3);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--purple-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(126, 87, 194, 0.4);
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark-text);
+            background-color: #222;
             color: var(--primary-white);
-            padding: 4rem 0 1.5rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h3 {
-            color: var(--secondary-purple);
-            margin-bottom: 1.5rem;
-            font-size: 1.4rem;
-        }
-
-        .footer-section p {
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            color: #ccc;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary-purple);
-            padding-left: 5px;
-        }
-
-        .contact-info {
-            list-style: none;
-        }
-
-        .contact-info li {
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .contact-info i {
-            color: var(--secondary-purple);
-            margin-right: 1rem;
-            font-size: 1.2rem;
-            margin-top: 0.2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--primary-white);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: var(--secondary-purple);
-            transform: translateY(-3px);
+            padding: 4rem 0 2rem;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #aaa;
+            color: #888;
             font-size: 0.9rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
         }
 
         /* Media Queries */
         @media (max-width: 992px) {
             .program-content {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2.5rem;
             }
 
             .program-image {
+                height: 350px;
                 order: -1;
+            }
+
+            .section-title {
+                font-size: 2rem;
             }
         }
 
@@ -762,7 +342,6 @@
                 transition: var(--transition);
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
                 padding: 2rem 0;
-                gap: 0;
             }
 
             .nav-menu.active {
@@ -772,61 +351,11 @@
             .nav-menu li {
                 margin: 1rem 0;
             }
-
-            .page-title {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .page-title {
-                font-size: 2.2rem;
-            }
-
-            .container {
-                padding: 0 1.5rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
         }
     </style>
 </head>
 
-<style>
-    .logo-section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    .logo-image {
-        width: 50px;
-        height: 50px;
-        background-image: url('aswedo.png');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        box-shadow: 0 4px 15px rgba(126, 87, 194, 0.3);
-    }
-
-    .logo-text {
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: var(--secondary-purple);
-        line-height: 1.0;
-    }
-</style>
-
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <div class="nav-container">
@@ -853,439 +382,271 @@
         </div>
     </header>
 
-    <!-- Page Header -->
     <section class="page-header">
-        <div class="hero-slides">
-
-            <div class="hero-slide active" style="background-image: url('work_hero.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('training4.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('involve_image_1.jpg');"></div>
-
-        </div>
         <div class="container">
-            <div class="fade-text">
-                <h1 class="page-title">Our <span>Work</span></h1>
-                <p class="page-subtitle">Discover how ASWEDO Cameroon is transforming lives through entrepreneurship,
-                    skills
-                    development, and community support</p>
-            </div>
+            <h1 class="page-title">Our <span>Work</span></h1>
+            <p class="page-subtitle">Impactful initiatives designed to empower communities, protect the vulnerable, and
+                build a more equitable society in Cameroon.</p>
         </div>
     </section>
 
-    <!-- Breadcrumb -->
-    <section class="breadcrumb">
+    <section id="gender-development" class="program-section">
         <div class="container">
-            <ul class="breadcrumb-content">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Our Work</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Women's Entrepreneurship Program -->
-    <section class="program-section">
-        <div class="container">
-            <h2 class="section-title">Women's <span>Entrepreneurship Program</span></h2>
-            <p class="section-subtitle">Empowering women with the skills, knowledge, and resources to start and grow
-                successful businesses</p>
+            <h2 class="section-title">Gender and <span>Development</span></h2>
+            <p class="section-subtitle">Promoting gender equality and integrating women into all levels of
+                socio-economic development.</p>
 
             <div class="program-content">
                 <div class="program-text">
-                    <p>Our Women's Entrepreneurship Program is designed to address the unique challenges faced by women
-                        in starting and sustaining businesses in Cameroon. We provide comprehensive training in business
-                        management, financial literacy, and market analysis to equip women with the tools they need for
-                        success.</p>
-                    <p>Through our mentorship program, experienced business leaders guide participants through the
-                        process of developing business plans, accessing capital, and navigating regulatory requirements.
-                        We also facilitate networking opportunities with potential investors and partners.</p>
-                    <p>Since its inception, this program has helped launch over 200 women-owned businesses across
-                        various sectors including agriculture, retail, services, and manufacturing.</p>
+                    <p>At ASWEDO, we believe that true development is impossible without the full participation of
+                        women. Our Gender and Development program is designed to dismantle the cultural and systemic
+                        barriers that historically limit the potential of women and girls in Cameroon. We focus on
+                        shifting the narrative from passive beneficiaries to active agents of change.</p>
+                    <p>We work extensively with local councils and traditional authorities to ensure that gender
+                        perspectives are mainstreamed into all local governance frameworks. By facilitating dialogue
+                        between genders, we foster a community-led approach where men and boys become allies in the
+                        pursuit of equality, resulting in more inclusive and resilient community structures.</p>
+                    <p>Our long-term goal is to see a society where gender no longer dictates access to education,
+                        leadership, or economic resources, creating a balanced foundation for future generations.</p>
                 </div>
-                <div class="program-image">
-                    <span>Women Entrepreneurship Training</span>
+                <div class="program-image" style="background-image: url('program_image.jpg');">
+                    <span>Gender Equality Initiatives</span>
                 </div>
             </div>
 
             <div class="program-features">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="feature-title">Business Skills Training</h3>
-                    <p class="feature-text">Comprehensive training in business planning, marketing, financial
-                        management, and customer service to build sustainable enterprises.</p>
+                    <div class="feature-icon"><i class="fas fa-venus-mars"></i></div>
+                    <h3 class="feature-title">Gender Mainstreaming</h3>
+                    <p class="feature-text">Ensuring gender perspectives are central to all community development
+                        projects and local policies.</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-hand-holding-usd"></i>
-                    </div>
-                    <h3 class="feature-title">Financial Literacy</h3>
-                    <p class="feature-text">Education on budgeting, saving, credit management, and investment to ensure
-                        financial stability and growth.</p>
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="feature-title">Leadership Training</h3>
+                    <p class="feature-text">Building the capacity of women to take on leadership roles in local councils
+                        and community groups.</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="feature-title">Mentorship Program</h3>
-                    <p class="feature-text">One-on-one guidance from experienced entrepreneurs to navigate challenges
-                        and capitalize on opportunities.</p>
+                    <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="feature-title">Rights Awareness</h3>
+                    <p class="feature-text">Educating women and girls about their legal rights and opportunities for
+                        socio-economic advancement.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Youth Empowerment Program -->
-    <section class="program-section" style="background-color: var(--background-light);">
+    <section id="economic-empowerment" class="program-section" style="background-color: var(--background-light);">
         <div class="container">
-            <h2 class="section-title">Youth <span>Empowerment Program</span></h2>
-            <p class="section-subtitle">Equipping young people with practical skills for employment and entrepreneurship
-            </p>
+            <h2 class="section-title">Economic Empowerment, <span>Livelihood and Support</span></h2>
+            <p class="section-subtitle">Building financial independence through skills training, resources, and
+                sustainable business support.</p>
 
             <div class="program-content">
-                <div class="program-image" id="one">
-                    <span>Youth Skills Training</span>
+                <div class="program-image" style="background-image: url('program_image_one.jpg');">
+                    <span>Livelihood Support Programs</span>
                 </div>
                 <div class="program-text">
-                    <p>Our Youth Empowerment Program addresses the high unemployment rate among young people in Cameroon
-                        by providing market-relevant skills training and career guidance. We focus on both technical
-                        skills and soft skills development to prepare youth for the workforce.</p>
-                    <p>Through apprenticeships in tailoring, hairdressing, ICT, and agriculture, participants gain
-                        hands-on experience under the guidance of skilled mentors. We also provide life skills training
-                        covering communication, problem-solving, and financial management.</p>
-                    <p>Our career guidance workshops help youth identify their strengths, explore career options, and
-                        develop job search strategies. We also facilitate connections with potential employers through
-                        job fairs and networking events.</p>
+                    <p>Poverty remains a significant barrier to dignity and safety. Our Economic Empowerment program
+                        provides a lifeline to marginalized individuals—particularly widows, single mothers, and
+                        youth—by equipping them with the practical skills needed to thrive in the modern economy.</p>
+                    <p>We go beyond simple training; we provide a holistic ecosystem of support. This includes providing
+                        start-up kits for vocational graduates, establishing village savings and loan associations, and
+                        offering mentorship for micro-entrepreneurs. Our agribusiness initiatives teach climate-smart
+                        farming and food processing techniques to ensure that rural families can turn subsistence
+                        farming into a profitable venture.</p>
+                    <p>By fostering financial independence, we reduce the vulnerability of women to exploitation and
+                        domestic violence, creating a ripple effect of prosperity that benefits entire households.</p>
                 </div>
             </div>
 
             <div class="program-features">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-scissors"></i>
-                    </div>
-                    <h3 class="feature-title">Tailoring Apprenticeships</h3>
-                    <p class="feature-text">Comprehensive training in fashion design, pattern making, and garment
-                        construction for aspiring tailors and fashion entrepreneurs.</p>
+                    <div class="feature-icon"><i class="fas fa-seedling"></i></div>
+                    <h3 class="feature-title">Agribusiness</h3>
+                    <p class="feature-text">Training in modern farming and food processing to ensure food security and
+                        income generation.</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3 class="feature-title">Hairdressing Training</h3>
-                    <p class="feature-text">Skills development in modern hairdressing techniques, salon management, and
-                        customer service for beauty industry careers.</p>
+                    <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3 class="feature-title">Micro-Grants</h3>
+                    <p class="feature-text">Providing essential financial resources to help women and youth launch
+                        sustainable small businesses.</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="feature-title">ICT Skills</h3>
-                    <p class="feature-text">Training in computer literacy, software applications, and basic programming
-                        to prepare youth for digital economy opportunities.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3 class="feature-title">Agriculture Training</h3>
-                    <p class="feature-text">Modern farming techniques, agribusiness management, and sustainable
-                        agricultural practices for food security and income generation.</p>
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="feature-title">Vocational Training</h3>
+                    <p class="feature-text">Hands-on training in tailoring, hairdressing, and ICT to provide marketable
+                        job skills.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Community Support Initiatives -->
-    <section class="program-section">
+    <section id="sensitization-training" class="program-section">
         <div class="container">
-            <h2 class="section-title">Community <span>Support Initiatives</span></h2>
-            <p class="section-subtitle">Strengthening communities through targeted support for vulnerable groups</p>
+            <h2 class="section-title">Sensitization and <span>Training</span></h2>
+            <p class="section-subtitle">Raising awareness and building capacity through educational workshops and
+                community outreach.</p>
 
             <div class="program-content">
                 <div class="program-text">
-                    <p>Our Community Support Initiatives address the needs of the most vulnerable members of society,
-                        including Orphans and Vulnerable Children (OVC), the elderly, and people affected by health
-                        challenges.</p>
-                    <p>We provide educational support to OVC through school fee assistance, scholastic materials, and
-                        tutoring programs. For the elderly, we offer social support, health monitoring, and assistance
-                        with daily activities.</p>
-                    <p>Our health awareness campaigns focus on preventive healthcare, with special emphasis on HIV/AIDS
-                        education, maternal and child health, and hygiene practices. We collaborate with local health
-                        centers to provide screening and referral services.</p>
+                    <p>Knowledge is the most powerful tool for community transformation. Our Sensitization and Training
+                        program is the bridge between policy and practice. We conduct frequent outreach campaigns to
+                        educate the public on sensitive but vital topics, including sexual reproductive health, hygiene,
+                        and environmental stewardship.</p>
+                    <p>Our training modules are designed to be inclusive and accessible. We host workshops for community
+                        leaders to help them understand international human rights standards and how to apply them
+                        locally. For youth, we provide seminars on civic responsibility and digital literacy, preparing
+                        them to be the informed leaders of tomorrow.</p>
+                    <p>By constantly engaging the community in learning, we replace misinformation with facts and apathy
+                        with action, ensuring that every citizen knows their rights and their responsibilities.</p>
                 </div>
-                <div class="program-image" id="two">
-                    <span>Community Support Activities</span>
+                <div class="program-image" style="background-image: url('training4.jpg');">
+                    <span>Community Training Workshops</span>
                 </div>
             </div>
 
             <div class="program-features">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3 class="feature-title">OVC Support</h3>
-                    <p class="feature-text">Comprehensive support for Orphans and Vulnerable Children including
-                        education, healthcare, and psychosocial support.</p>
+                    <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="feature-title">Awareness Campaigns</h3>
+                    <p class="feature-text">Regular community outreaches on health education, civic rights, and social
+                        protection issues.</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <h3 class="feature-title">Elderly Care</h3>
-                    <p class="feature-text">Social support, health monitoring, and assistance with daily activities for
-                        elderly community members.</p>
+                    <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="feature-title">Capacity Building</h3>
+                    <p class="feature-text">Targeted workshops designed to improve professional and life skills for all
+                        community members.</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3 class="feature-title">Health Awareness</h3>
-                    <p class="feature-text">Education on preventive healthcare, HIV/AIDS, maternal health, and hygiene
-                        practices for community wellbeing.</p>
+                    <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3 class="feature-title">Stakeholder Training</h3>
+                    <p class="feature-text">Empowering local leaders and influencers to better serve and protect their
+                        vulnerable populations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Impact Section -->
-    <section class="program-section impact">
+    <section id="advocacy-peace" class="program-section" style="background-color: var(--background-light);">
         <div class="container">
-            <h2 class="section-title">Our <span>Impact</span></h2>
-            <p class="section-subtitle">Measuring our progress and celebrating our achievements</p>
+            <h2 class="section-title">Advocacy and <span>Peace Building</span></h2>
+            <p class="section-subtitle">Fostering social cohesion and advocating for the rights of the marginalized.</p>
 
-            <div class="impact-stats">
-                <div class="stat-card">
-                    <span class="stat-number">500+</span>
-                    <div class="stat-label">Women Trained</div>
+            <div class="program-content">
+                <div class="program-image" style="background-image: url('work_hero.jpg');">
+                    <span>Conflict Resolution & Advocacy</span>
                 </div>
-
-                <div class="stat-card">
-                    <span class="stat-number">300+</span>
-                    <div class="stat-label">Youth Empowered</div>
-                </div>
-
-                <div class="stat-card">
-                    <span class="stat-number">200+</span>
-                    <div class="stat-label">Businesses Launched</div>
-                </div>
-
-                <div class="stat-card">
-                    <span class="stat-number">50+</span>
-                    <div class="stat-label">Communities Served</div>
+                <div class="program-text">
+                    <p>In regions often touched by tension, ASWEDO serves as a mediator and a champion for peace. Our
+                        Advocacy and Peace Building program works to build bridges between conflicting groups,
+                        emphasizing dialogue over confrontation. We believe that sustainable development can only take
+                        root in an environment of stability and mutual respect.</p>
+                    <p>We advocate fiercely for the rights of those often ignored by mainstream systems. This involves
+                        meeting with government officials, traditional rulers, and international partners to push for
+                        more inclusive legal protections. Our "Peace Circles" bring together diverse community members
+                        to resolve local disputes and rebuild trust after conflict, ensuring that the social fabric
+                        remains strong.</p>
+                    <p>Through this program, we are cultivating a culture of peace where differences are celebrated
+                        rather than feared, and where justice is accessible to all.</p>
                 </div>
             </div>
 
-            <h3 style="text-align: center; margin-bottom: 2rem; color: var(--dark-text);">Transformation Stories</h3>
-            <div class="impact-stories">
-                <div class="story-card">
-                    <div class="story-image">
-                        <span>Business Success</span>
-                    </div>
-                    <div class="story-content">
-                        <h3 class="story-title">From Market Vendor to Business Owner</h3>
-                        <p class="story-text">Sarah's small vegetable stand has grown into a thriving agro-business
-                            supplying local restaurants and hotels, creating jobs for five other women in her community.
-                        </p>
-                    </div>
+            <div class="program-features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 class="feature-title">Conflict Mediation</h3>
+                    <p class="feature-text">Providing neutral platforms for resolving community disputes and fostering
+                        long-term reconciliation.</p>
                 </div>
-
-                <div class="story-card">
-                    <div class="story-image">
-                        <span>Skills Development</span>
-                    </div>
-                    <div class="story-content">
-                        <h3 class="story-title">Youth Transforming Communities</h3>
-                        <p class="story-text">A group of youth trained in our ICT program now runs a community digital
-                            center, providing computer training and services to over 200 people annually.</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-gavel"></i></div>
+                    <h3 class="feature-title">Rights Advocacy</h3>
+                    <p class="feature-text">Engaging with authorities to promote and implement policies that protect
+                        women and children.</p>
                 </div>
-
-                <div class="story-card">
-                    <div class="story-image">
-                        <span>Community Impact</span>
-                    </div>
-                    <div class="story-content">
-                        <h3 class="story-title">Healthier Communities</h3>
-                        <p class="story-text">Our health awareness campaigns have contributed to a 40% increase in HIV
-                            testing and a significant improvement in hygiene practices in target communities.</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-dove"></i></div>
+                    <h3 class="feature-title">Social Cohesion</h3>
+                    <p class="feature-text">Organizing events and dialogues that bring diverse ethnic and social groups
+                        together in unity.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
+    <section id="gbv-support" class="program-section">
         <div class="container">
-            <h2 class="section-title">Photo <span>Gallery</span></h2>
-            <p class="section-subtitle">A visual journey through our programs and their impact</p>
+            <h2 class="section-title">Psychosocial Support to <span>GBV Survivors</span></h2>
+            <p class="section-subtitle">Providing healing pathways and holistic support for survivors of Gender-Based
+                Violence.</p>
 
-            <div class="gallery-grid">
-                <div class="gallery-item" id="item_one">
-                    <span>Training Session</span>
+            <div class="program-content">
+                <div class="program-text">
+                    <p>Gender-Based Violence (GBV) leaves deep scars that are both physical and psychological. Our
+                        specialized support program offers a sanctuary for survivors to begin their journey toward
+                        healing. We provide a survivor-centered approach that prioritizes the safety, confidentiality,
+                        and dignity of every individual who walks through our doors.</p>
+                    <p>Our team of trained psychosocial workers provides individual and group counseling, helping
+                        survivors process trauma and rebuild their self-esteem. We also act as a vital link to the
+                        justice system and medical facilities, ensuring that survivors receive legal guidance and
+                        healthcare without fear of stigma. Recovery doesn't end with a counseling session; we offer
+                        reintegration support to help survivors return to their communities with the strength and
+                        resources to start anew.</p>
+                    <p>We are committed to breaking the cycle of violence and ensuring that no survivor has to walk the
+                        path of recovery alone.</p>
                 </div>
-                <div class="gallery-item" id="item_two">
-                    <span>Business Launch</span>
-                </div>
-                <div class="gallery-item" id="item_three">
-                    <span>Youth Apprenticeship</span>
-                </div>
-                <div class="gallery-item" id="item_four">
-                    <span>Community Event</span>
-                </div>
-                <div class="gallery-item" id="item_five">
-                    <span>Graduation Ceremony</span>
-                </div>
-                <div class="gallery-item" id="item_six">
-                    <span>Health Campaign</span>
+                <div class="program-image" style="background-image: url('program_image_two.jpg');">
+                    <span>Survivor Support Services</span>
                 </div>
             </div>
+
+            <div class="program-features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3 class="feature-title">Trauma Counseling</h3>
+                    <p class="feature-text">Professional individual and group therapy sessions led by empathetic support
+                        workers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="feature-title">Legal & Medical Referrals</h3>
+                    <p class="feature-text">Assisting survivors with access to safe shelters, legal aid, and essential
+                        medical care.</p>
+                </div>
+                <div class="feature-card"><i class="fas fa-redo"></i></div>
+                <h3 class="feature-title">Reintegration</h3>
+                <p class="feature-text">Providing the tools and social support needed for survivors to reclaim their
+                    independence.</p>
+            </div>
+        </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ASWEDO Cameroon</h3>
-                    <p>Empowering women and youth through entrepreneurship and skills development for sustainable
-                        community growth across Cameroon.</p>
-                    <div class="social-links">
-                        <a href="https://web.facebook.com/share/p/1CJUBWfvwP/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/ASWEDO2/status/2019776695968923849?s=20"><i
-                                class="fab fa-twitter"></i></a>
-                        <a
-                            href="https://www.instagram.com/p/DUawhwMAnG3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="work.html">Our Work</a></li>
-                        <li><a href="involve.html">Get Involved</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>Bamenda, Northwest Region<br>Cameroon</div>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <div>+237 670 293 661</div>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <div>aswedongo@gmail.com</div>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <div>Mon - Fri: 8:00 AM - 5:00 PM</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 ASWEDO Cameroon. All rights reserved.</p>
+                <p>&copy; 2026 ASWEDO Cameroon. Empowering communities through dedicated service.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        const slides = document.querySelectorAll('.hero-slide');
-        const text = document.querySelector('.fade-text');
-        let currentSlide = 0;
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
 
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-
-            currentSlide = (currentSlide + 1) % slides.length;
-
-            slides[currentSlide].classList.add('active');
-
-            // Restart text animation
-            text.classList.remove('fade-text');
-            void text.offsetWidth; // trigger reflow
-            text.classList.add('fade-text');
-
-        }, 3000);
-    </script>
-
-    <script>
-        // Mobile Navigation Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
         });
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Header Scroll Effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        });
-
-        // Animated Counter for Impact Stats
-        const animateCounters = () => {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200; // Lower is faster
-
-            counters.forEach(counter => {
-                const target = +counter.innerText.replace('+', '');
-                const count = +counter.innerText.replace('+', '');
-                const increment = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment) + '+';
-                    setTimeout(animateCounters, 20);
-                } else {
-                    counter.innerText = target + '+';
-                }
-            });
-        };
-
-        // Intersection Observer for counter animation
-        const impactSection = document.querySelector('.impact');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(impactSection);
+        // Close menu on link click
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+        }));
     </script>
 </body>
 
