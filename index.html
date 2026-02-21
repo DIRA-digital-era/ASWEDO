@@ -60,11 +60,13 @@
             color: var(--dark-text);
             background-color: var(--primary-white);
             overflow-x: hidden;
+            text-align: center;
         }
 
         .container {
             max-width: 1000px;
             padding: 0 3rem;
+            margin: 0 auto;
         }
 
         /* Header Styles */
@@ -140,6 +142,13 @@
             overflow: hidden;
             display: flex;
             align-items: center;
+
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            padding: 0 3rem;
+            margin: 0 0;
         }
 
         /* SLIDES */
@@ -176,7 +185,8 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            position: absolute;
+            max-width: 1%;
             color: #fff;
         }
 
@@ -204,7 +214,7 @@
 
 
         .hero-content {
-            text-align: left;
+            text-align: left !important;
             animation: fadeInUp 1s ease;
             max-width: 800px;
             margin: 0;
@@ -350,6 +360,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
+            padding: 0 3rem;
         }
 
         .program-card {
@@ -447,6 +458,7 @@
         .testimonial-author {
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         .author-avatar {
@@ -525,6 +537,7 @@
             margin-bottom: 1.2rem;
             display: flex;
             align-items: flex-start;
+            justify-content: center;
         }
 
         .contact-info i {
@@ -538,6 +551,7 @@
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
+            justify-content: center;
         }
 
         .social-links a {
@@ -660,6 +674,7 @@
 
             .programs-grid {
                 grid-template-columns: 1fr;
+                padding: 0 1.5rem;
             }
 
             .container {
@@ -735,7 +750,7 @@
 
         </div>
 
-        <div class="container">
+        <div class="container" id="hero-conatainer">
             <div class="hero-content fade-text">
                 <h1 class="hero-title">
                     Empowered for <span>Sustainability</span>
@@ -756,7 +771,7 @@
 
 
     <!-- Metrics Section -->
-    <section class="metrics">
+    <!-- <section class="metrics">
         <div class="container">
             <div class="metrics-grid">
                 <div class="metric-card">
@@ -785,11 +800,12 @@
                         <i class="fas fa-calendar-alt"></i>
                     </div>
                     <span class="metric-number" data-target="15">0</span>
+                    <span class="metric-number" data-target="8">0</span>
                     <div class="metric-label">Years of Service</div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Programs Section -->
     <section class="programs">
@@ -798,70 +814,70 @@
             <p class="section-subtitle">We focus on empowering women and youth through targeted programs that create
                 lasting impact in communities across Cameroon.</p>
 
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-image"
-                        style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('program_image.jpg') no-repeat center/cover;">
-                        <span>Gender and Development</span>
-                    </div>
-                    <div class="program-content">
-                        <h3 class="program-title">Gender and Development</h3>
-                        <p class="program-description">Promoting gender equality and integrating women into all levels
-                            of socio-economic development.</p>
-                        <a href="work.html#gender-development" class="btn btn-secondary">Learn More</a>
-                    </div>
+        </div>
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-image"
+                    style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('program_image.jpg') no-repeat center/cover;">
+                    <span>Gender and Development</span>
                 </div>
-
-                <div class="program-card">
-                    <div class="program-image"
-                        style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('program_image_one.jpg') no-repeat center/cover;">
-                        <span>Economic Empowerment</span>
-                    </div>
-                    <div class="program-content">
-                        <h3 class="program-title">Economic Empowerment, Livelihood and Support</h3>
-                        <p class="program-description">Building financial independence through skills training,
-                            resources, and sustainable business support.</p>
-                        <a href="work.html#economic-empowerment" class="btn btn-secondary">Learn More</a>
-                    </div>
+                <div class="program-content">
+                    <h3 class="program-title">Gender and Development</h3>
+                    <p class="program-description">Promoting gender equality and integrating women into all levels
+                        of socio-economic development.</p>
+                    <a href="programs.html#gender-development" class="btn btn-secondary">Learn More</a>
                 </div>
+            </div>
 
-                <div class="program-card">
-                    <div class="program-image"
-                        style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('training4.jpg') no-repeat center/cover;">
-                        <span>Sensitization and Training</span>
-                    </div>
-                    <div class="program-content">
-                        <h3 class="program-title">Sensitization and Training</h3>
-                        <p class="program-description">Raising awareness and building capacity through educational
-                            workshops and community outreach.</p>
-                        <a href="work.html#sensitization-training" class="btn btn-secondary">Learn More</a>
-                    </div>
+            <div class="program-card">
+                <div class="program-image"
+                    style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('program_image_one.jpg') no-repeat center/cover;">
+                    <span>Economic Empowerment</span>
                 </div>
-
-                <div class="program-card">
-                    <div class="program-image"
-                        style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('work_hero.jpg') no-repeat center/cover;">
-                        <span>Advocacy and Peace Building</span>
-                    </div>
-                    <div class="program-content">
-                        <h3 class="program-title">Advocacy and Peace Building</h3>
-                        <p class="program-description">Fostering social cohesion and advocating for the rights of the
-                            marginalized.</p>
-                        <a href="work.html#advocacy-peace" class="btn btn-secondary">Learn More</a>
-                    </div>
+                <div class="program-content">
+                    <h3 class="program-title">Economic Empowerment, Livelihood and Support</h3>
+                    <p class="program-description">Building financial independence through skills training,
+                        resources, and sustainable business support.</p>
+                    <a href="programs.html#economic-empowerment" class="btn btn-secondary">Learn More</a>
                 </div>
+            </div>
 
-                <div class="program-card">
-                    <div class="program-image"
-                        style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('program_image_two.jpg') no-repeat center/cover;">
-                        <span>Psychosocial Support</span>
-                    </div>
-                    <div class="program-content">
-                        <h3 class="program-title">Psychosocial Support to GBV Survivors</h3>
-                        <p class="program-description">Providing healing pathways and holistic support for survivors of
-                            Gender-Based Violence.</p>
-                        <a href="work.html#gbv-support" class="btn btn-secondary">Learn More</a>
-                    </div>
+            <div class="program-card">
+                <div class="program-image"
+                    style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('training4.jpg') no-repeat center/cover;">
+                    <span>Sensitization and Training</span>
+                </div>
+                <div class="program-content">
+                    <h3 class="program-title">Sensitization and Training</h3>
+                    <p class="program-description">Raising awareness and building capacity through educational
+                        workshops and community outreach.</p>
+                    <a href="programs.html#sensitization-training" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-image"
+                    style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('work_hero.jpg') no-repeat center/cover;">
+                    <span>Advocacy and Peace Building</span>
+                </div>
+                <div class="program-content">
+                    <h3 class="program-title">Advocacy and Peace Building</h3>
+                    <p class="program-description">Fostering social cohesion and advocating for the rights of the
+                        marginalized.</p>
+                    <a href="programs.html#advocacy-peace" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-image"
+                    style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.514) 50%), url('program_image_two.jpg') no-repeat center/cover;">
+                    <span>Psychosocial Support</span>
+                </div>
+                <div class="program-content">
+                    <h3 class="program-title">Psychosocial Support to GBV Survivors</h3>
+                    <p class="program-description">Providing healing pathways and holistic support for survivors of
+                        Gender-Based Violence.</p>
+                    <a href="programs.html#gbv-support" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
         </div>
@@ -938,8 +954,10 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="involve.html#program-section">Our Programs</a></li>
+                        <li><a href="work.html">Our Work</a></li>
                         <li><a href="involve.html">Get Involved</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -959,8 +977,17 @@
                             <div>aswedongo@gmail.com</div>
                         </li>
                         <li>
+                            <i class="fas fa-briefcase"></i>
+                            <div>Years of service: 8 years</div>
+                        </li>
+                        <li>
                             <i class="fas fa-clock"></i>
                             <div>Mon - Fri: 8:00 AM - 5:00 PM</div>
+                            <div>Operating hours: 8 AM - 4 PM</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>Working days: Tuesday - Saturday</div>
                         </li>
                     </ul>
                 </div>
