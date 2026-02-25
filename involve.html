@@ -421,6 +421,29 @@
             box-shadow: 0 0 0 2px rgba(126, 87, 194, 0.2);
         }
 
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--light-text);
+            cursor: pointer;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--secondary-purple);
+            cursor: pointer;
+        }
+
         /* Skills Grid */
         .skills-grid {
             display: grid;
@@ -1065,20 +1088,19 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="skills" class="form-label">Skills & Expertise</label>
-                        <select id="skills" class="form-select" multiple>
-                            <option value="training">Training & Facilitation</option>
-                            <option value="mentoring">Mentoring</option>
-                            <option value="advocacy">Community Advocacy</option>
-                            <option value="psychosocial">Psychosocial Support</option>
-                            <option value="it">Digital / IT Support</option>
-                            <option value="events">Event & Field Coordination</option>
-                            <option value="communications">Communications & Media</option>
-                            <option value="fundraising">Fundraising & Partnerships</option>
-                            <option value="translation">Translation</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <small>Hold Ctrl/Cmd to select multiple options</small>
+                        <label class="form-label">Skills & Expertise</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="training"> Training & Facilitation</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="mentoring"> Mentoring</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="advocacy"> Community Advocacy</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="psychosocial"> Psychosocial Support</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="it"> Digital / IT Support</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="events"> Event & Field Coordination</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="communications"> Communications & Media</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="fundraising"> Fundraising & Partnerships</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="translation"> Translation</label>
+                            <label class="checkbox-item"><input type="checkbox" name="skills" value="other"> Other</label>
+                        </div>
                     </div>
 
                     <div class="form-group">
