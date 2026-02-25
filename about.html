@@ -836,6 +836,30 @@
                 margin: 0 auto;
             }
         }
+
+        .objectives-list {
+            list-style: none;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .objectives-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--light-text);
+        }
+
+        .objectives-list li::before {
+            content: "\f00c";
+            /* FontAwesome check */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--secondary-purple);
+        }
     </style>
 </head>
 
@@ -930,6 +954,7 @@
             <h2 class="section-title">Our <span>Story</span></h2>
             <p class="section-subtitle">Founded in <b>2012</b> and legalized in <b>2018</b>, ASWEDO Cameroon has been
                 at the forefront of women's empowerment and youth development initiatives across Cameroon.</p>
+            <p class="section-subtitle">Established in <b>2018</b> in Bamenda, North West Region of Cameroon.</p>
 
             <div class="story-content">
                 <div class="story-text">
@@ -945,6 +970,12 @@
                     <p>Based in Bamenda, we have expanded our reach to remote communities, adapting our programs to meet
                         local needs while maintaining our core mission of fostering sustainable development through
                         economic development and skills training.</p>
+                    <p>The Aspired Women Empowerment and Development Organization (ASWEDO) is a non-profit,
+                        socio-economic organization established in 2018 in Bamenda, North West Region of Cameroon.</p>
+                    <p>ASWEDO was founded to empower women, girls, and vulnerable populations to live meaningful lives
+                        and contribute actively to the socio-economic development of their communities.</p>
+                    <p>From inception, the organization has worked at the intersection of gender, education, economic
+                        empowerment, health, and peacebuilding.</p>
                 </div>
                 <div class="story-image">
                     <span>ASWEDO Team in Communities</span>
@@ -957,17 +988,21 @@
     <section class="about-section mission-vision">
         <div class="container">
             <h2 class="section-title">Our <span>Mission & Vision</span></h2>
+            <h2 class="section-title">Mission, Vision & <span>Goal</span></h2>
             <p class="section-subtitle">Guided by our core purpose and aspirations for the future</p>
 
             <div class="mv-grid">
                 <div class="mv-card">
                     <div class="mv-icon">
                         <i class="fas fa-bullseye"></i>
+                        <i class="fas fa-rocket"></i>
                     </div>
                     <h3 class="mv-title">Our Mission</h3>
                     <p class="mv-text">To empower women and youth through skills development, community support
                         initiatives, and economic development opportunities that foster economic independence, social
                         inclusion, and sustainable development in Cameroon.</p>
+                    <p class="mv-text">Enhancing women and girls' potential and personal development through education
+                        and training.</p>
                 </div>
 
                 <div class="mv-card">
@@ -978,6 +1013,83 @@
                     <p class="mv-text">We envision a Cameroon where all women and youth have equal opportunities to
                         realize their potential, contribute to their communities, and participate fully in the economic
                         and social development of the nation.</p>
+                    <p class="mv-text">An equitable society with women and girls at the lime light, occupying
+                        challenging positions like the men.</p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="mv-title">Our Goal</h3>
+                    <p class="mv-text">To contribute in enhancing the socio-economic and political development of women
+                        and youths in Cameroon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Our <span>Objectives</span></h2>
+            <ul class="objectives-list">
+                <li>Promote and advocate for sexual and reproductive health rights for women and girls by organizing
+                    sensitization campaigns and counselling workshops with adolescent girls and women especially those
+                    in the rural milieu.</li>
+                <li>Advocate for improved access to education for women and youths in rural communities by organizing
+                    workshops and seminars on the virtues of education.</li>
+                <li>Empower women and girls through capacity building workshops on entrepreneurial skills and
+                    opportunities through trainings for small scale businesses petit trades.</li>
+                <li>Advocate for affordable healthcare services through health sensitization campaigns on the values of
+                    good health.</li>
+                <li>Train and mentor women and girls in leadership dynamics and capacity building skills.</li>
+                <li>Promote and support economic activities for youths, orphans and vulnerable and the underprivileged
+                    in the community.</li>
+                <li>Advocate for gender equality and fair representation of women at the level of socio-cultural and
+                    political structures.</li>
+                <li>To foster sustainable agricultural and environmental friendly practices through environment clubs in
+                    schools.</li>
+                <li>Advocate for human rights, peace and conflict management by presenting common wealth core values.
+                </li>
+                <li>Counselling and educating girls and women according to professional requirements and growth to meet
+                    up with global challenges.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Domains of Intervention -->
+    <section class="about-section" style="background-color: var(--background-light);">
+        <div class="container">
+            <h2 class="section-title">Domains of <span>Intervention</span></h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3 class="value-title">Health</h3>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="value-title">Education</h3>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="value-title">Economic Empowerment</h3>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3 class="value-title">Leadership</h3>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 class="value-title">Peace & Conflict Management</h3>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="value-title">Gender & Human Rights</h3>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-leaf"></i></div>
+                    <h3 class="value-title">Environment & Climate Change</h3>
                 </div>
             </div>
         </div>
@@ -1103,6 +1215,8 @@
         <div class="container">
             <h2 class="section-title">Our <span>Approach</span></h2>
             <p class="section-subtitle">How we create sustainable impact in communities</p>
+            <h2 class="section-title">Method of <span>Intervention</span></h2>
+            <p class="section-subtitle">How we implement our programs and reach our goals</p>
 
             <div class="approach-steps">
                 <div class="approach-step">
@@ -1110,6 +1224,9 @@
                     <p class="step-text">We work with communities to identify their specific needs and priorities,
                         ensuring our programs are relevant and sustainable. Community members actively participate in
                         planning, implementation, and evaluation.</p>
+                    <h3 class="step-title">Seminars & Workshops</h3>
+                    <p class="step-text">Organizing and participating in seminars, lectures, exhibitions, workshops and
+                        public information fares mobilization.</p>
                 </div>
 
                 <div class="approach-step">
@@ -1117,18 +1234,31 @@
                     <p class="step-text">Our training programs emphasize practical skills that can be immediately
                         applied. We combine classroom learning with real-world practice to ensure participants gain
                         confidence and competence.</p>
+                    <h3 class="step-title">Training & Counselling</h3>
+                    <p class="step-text">Training, coaching, counselling and implementation of technical expertise,
+                        publication and distribution of written materials.</p>
                 </div>
 
                 <div class="approach-step">
                     <h3 class="step-title">Holistic Support</h3>
                     <p class="step-text">Beyond skills training, we provide mentorship, networking opportunities, and
                         access to resources that help women and youth overcome barriers to success.</p>
+                    <h3 class="step-title">Capacity Building</h3>
+                    <p class="step-text">Capacity building workshops and of youths through school clubs.</p>
                 </div>
 
                 <div class="approach-step">
                     <h3 class="step-title">Sustainable Impact</h3>
                     <p class="step-text">We focus on creating programs that continue to benefit communities long after
                         our direct involvement ends, building local capacity and fostering self-reliance.</p>
+                    <h3 class="step-title">Direct Assistance</h3>
+                    <p class="step-text">Material and financial assistance to the less privileged, orphans and
+                        vulnerable.</p>
+                </div>
+
+                <div class="approach-step">
+                    <h3 class="step-title">Advocacy</h3>
+                    <p class="step-text">Advocacy and Lobbying for enabling policy environments.</p>
                 </div>
             </div>
         </div>

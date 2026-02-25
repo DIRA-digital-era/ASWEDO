@@ -135,70 +135,35 @@
         }
 
         /* Hero Section */
-        /* HERO BASE */
-        .hero {
+        .hero-section {
             position: relative;
             height: 100vh;
-            overflow: hidden;
+            min-height: 600px;
             display: flex;
             align-items: center;
-
-        }
-
-        .hero-container {
-            max-width: 1000px;
-            padding: 0 3rem;
-            margin: 0 0;
-        }
-
-        /* SLIDES */
-        .hero-slides {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-        }
-
-        .hero-slide {
-            position: absolute;
-            inset: 0;
+            justify-content: flex-start;
+            padding: 0 5%;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('training4.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            overflow: hidden;
+            margin-top: 0;
         }
 
-        .hero-slide::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-slide.active {
-            opacity: 1;
-        }
-
-        /* CONTENT */
-        .hero .container {
-            position: relative;
+        .hero-content-wrapper {
+            max-width: 800px;
             z-index: 2;
+            padding-top: 80px;
         }
 
-        .hero-content {
-            position: absolute;
-            max-width: 1%;
-            color: #fff;
-        }
-
-        /* TEXT FADE */
-        .fade-text {
-            animation: fadeUp 1.3s ease forwards;
-        }
-
-        @keyframes fadeUp {
+        @keyframes fadeInSlideUp {
             from {
                 opacity: 0;
-                transform: translateY(25px);
+                transform: translateY(20px);
             }
 
             to {
@@ -207,45 +172,73 @@
             }
         }
 
-        /* OPTIONAL POLISH */
-        .hero-title span {
-            color: #f9c74f;
-        }
-
-
-        .hero-content {
-            text-align: left !important;
-            animation: fadeInUp 1s ease;
-            max-width: 800px;
-            margin: 0;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 700;
+        .hero-heading {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
             margin-bottom: 1.5rem;
-            color: var(--primary-white);
-            line-height: 1.2;
+            letter-spacing: -0.02em;
+            text-align: left;
+            color: #ffffff;
+            animation: fadeInSlideUp 0.8s ease-out forwards;
         }
 
-        .hero-title span {
+        .hero-heading span {
             color: var(--secondary-purple);
         }
 
-        .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--primary-white);
+        .hero-subtext {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            line-height: 1.6;
+            font-weight: 400;
             margin-bottom: 2.5rem;
+            color: #e0e0e0;
             max-width: 600px;
-            margin-left: 0;
-            margin-right: 0;
+            text-align: left;
+            animation: fadeInSlideUp 0.8s ease-out 0.2s forwards;
+            opacity: 0;
         }
 
-        .cta-buttons {
+        .hero-cta-group {
             display: flex;
-            gap: 1.5rem;
-            justify-content: left;
-            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: flex-start;
+            animation: fadeInSlideUp 0.8s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-btn-primary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-purple);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-btn-primary:hover {
+            background-color: var(--purple-dark);
+        }
+
+        .hero-btn-secondary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: transparent;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn-secondary:hover {
+            border-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .btn {
@@ -605,10 +598,6 @@
 
         /* Media Queries */
         @media (max-width: 992px) {
-            .hero-title {
-                font-size: 3rem;
-            }
-
             .section-title {
                 font-size: 2.4rem;
             }
@@ -641,14 +630,6 @@
                 margin: 1rem 0;
             }
 
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
             .section-title {
                 font-size: 2rem;
             }
@@ -664,10 +645,6 @@
         }
 
         @media (max-width: 576px) {
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
             .metric-number {
                 font-size: 2.8rem;
             }
@@ -740,72 +717,52 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slides">
-
-            <div class="hero-slide active" style="background-image: url('training4.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('community1.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('community2.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('program_image_2.jpg');"></div>
-
-        </div>
-
-        <div class="container" id="hero-conatainer">
-            <div class="hero-content fade-text">
-                <h1 class="hero-title">
-                    Empowered for <span>Sustainability</span>
-                </h1>
-
-                <p class="hero-subtitle">
-                    Women Empowerment, Community, Gender and Youth Empowerment. Join ASWEDO Cameroon in creating
-                    sustainable change through women's entrepreneurship and youth development.
-                </p>
-
-                <div class="cta-buttons">
-                    <a href="involve.html#program-section" class="btn btn-primary">Join With Us</a>
-                    <a href="contact.html" class="btn btn-secondary">Partner With Us</a>
-                </div>
+    <section class="hero-section">
+        <div class="hero-content-wrapper">
+            <h1 class="hero-heading">
+                Empowered for <br>
+                <span>Sustainability</span>
+            </h1>
+            <p class="hero-subtext">
+                Women Empowerment, Community, Gender and Youth Empowerment. Join ASWEDO Cameroon in creating
+                sustainable change through women's entrepreneurship and youth development.
+            </p>
+            <div class="hero-cta-group">
+                <a href="involve.html#program-section" class="hero-btn-primary">Join With Us</a>
+                <a href="contact.html" class="hero-btn-secondary">Partner With Us</a>
             </div>
         </div>
     </section>
 
 
     <!-- Metrics Section -->
-    <!-- <section class="metrics">
+    <section class="metrics">
         <div class="container">
             <div class="metrics-grid">
                 <div class="metric-card">
                     <div class="metric-icon">
                         <i class="fas fa-user-graduate"></i>
                     </div>
-                    <span class="metric-number" data-target="500">0</span>
-                    <div class="metric-label">Women Trained</div>
+                    <span class="metric-number" data-target="1700">0</span>
+                    <div class="metric-label">Women Empowered</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-icon">
-                        <i class="fas fa-hands-helping"></i>
+                        <i class="fas fa-slid fa-users"></i>
                     </div>
-                    <span class="metric-number" data-target="300">0</span>
-                    <div class="metric-label">Youth Empowered</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <span class="metric-number" data-target="50">0</span>
+                    <span class="metric-number" data-target="15">0</span>
                     <div class="metric-label">Communities Served</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <span class="metric-number" data-target="15">0</span>
                     <span class="metric-number" data-target="8">0</span>
                     <div class="metric-label">Years of Service</div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Programs Section -->
     <section class="programs">
@@ -998,26 +955,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        const slides = document.querySelectorAll('.hero-slide');
-        const text = document.querySelector('.fade-text');
-        let currentSlide = 0;
-
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-
-            currentSlide = (currentSlide + 1) % slides.length;
-
-            slides[currentSlide].classList.add('active');
-
-            // Restart text animation
-            text.classList.remove('fade-text');
-            void text.offsetWidth; // trigger reflow
-            text.classList.add('fade-text');
-
-        }, 3000);
-    </script>
 
 
     <script>
