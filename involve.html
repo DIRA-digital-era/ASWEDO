@@ -960,19 +960,24 @@
     <section class="involve-section">
         <div class="container">
             <h2 class="section-title">Become a <span>Volunteer</span></h2>
-            <p class="section-subtitle">Share your skills and time to make a meaningful difference in the lives of women
-                and youth</p>
+            <p class="section-subtitle">Share your skills, time, and passion to support women, girls, and vulnerable
+                communities in achieving meaningful and sustainable change.</p>
 
             <div class="involve-content">
                 <div class="involve-text">
-                    <p>Our volunteers are the backbone of ASWEDO Cameroon. They bring diverse skills, experiences, and
-                        perspectives that enrich our programs and expand our impact. Whether you can commit a few hours
-                        a week or participate in specific projects, your contribution matters.</p>
-                    <p>As a volunteer, you'll join a community of passionate individuals dedicated to creating positive
-                        change. You'll have the opportunity to develop new skills, gain valuable experience, and make
-                        lasting connections while contributing to meaningful work.</p>
-                    <p>We provide orientation, training, and ongoing support to ensure our volunteers have a rewarding
-                        and impactful experience. Join us and be part of the transformation!</p>
+                    <p>Volunteers are an essential part of ASWEDO’s work. They contribute diverse skills and
+                        perspectives that strengthen our programs in education, gender advocacy, economic empowerment,
+                        and community development.</p>
+                    <p>Whether you support ongoing activities or specific projects, your contribution helps expand our
+                        reach and impact in underserved communities.</p>
+                    <p>As a volunteer, you will:</p>
+                    <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--light-text);">
+                        <li>Gain hands-on experience in community-based development work</li>
+                        <li>Build skills in advocacy, training, and program implementation</li>
+                        <li>Be part of a network committed to gender equality and social change</li>
+                    </ul>
+                    <p>We provide orientation, guidance, and continuous support to ensure a meaningful and impactful
+                        volunteer experience.</p>
                 </div>
                 <div class="involve-image" id="one">
                     <span>ASWEDO Volunteers</span>
@@ -985,9 +990,9 @@
                     <div class="skill-icon">
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
-                    <h3 class="skill-title">Trainers & Educators</h3>
-                    <p class="skill-text">Deliver workshops on business skills, financial literacy, vocational training,
-                        and life skills to women and youth.</p>
+                    <h3 class="skill-title">Trainers & Facilitators</h3>
+                    <p class="skill-text">Support capacity-building workshops on livelihood skills, financial literacy,
+                        leadership, SRHR, and life skills for women, girls, and youth.</p>
                 </div>
 
                 <div class="skill-card">
@@ -995,26 +1000,44 @@
                         <i class="fas fa-hands-helping"></i>
                     </div>
                     <h3 class="skill-title">Mentors</h3>
-                    <p class="skill-text">Provide guidance and support to aspiring entrepreneurs and youth navigating
-                        career choices.</p>
+                    <p class="skill-text">Provide guidance and support to women and youth in personal development,
+                        leadership, and economic empowerment pathways.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="skill-title">Community Advocates</h3>
+                    <p class="skill-text">Support awareness campaigns on gender equality, human rights, SRHR,
+                        peacebuilding, and community development.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="skill-title">Psychosocial Support Volunteers</h3>
+                    <p class="skill-text">Assist in providing basic support and referrals for GBV survivors, working
+                        alongside trained personnel.</p>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3 class="skill-title">IT Support</h3>
-                    <p class="skill-text">Help with website maintenance, digital literacy training, and technology
-                        solutions for our programs.</p>
+                    <h3 class="skill-title">Digital & IT Support</h3>
+                    <p class="skill-text">Support digital literacy trainings, communications, data collection tools, and
+                        website/social media management.</p>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3 class="skill-title">Event Organizers</h3>
-                    <p class="skill-text">Assist in planning and executing workshops, training sessions, and community
-                        events.</p>
+                    <h3 class="skill-title">Event & Field Coordinators</h3>
+                    <p class="skill-text">Assist in organizing and implementing community outreach, trainings,
+                        workshops, and advocacy campaigns.</p>
                 </div>
             </div>
 
@@ -1037,18 +1060,30 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="location" class="form-label">Location (City/Region)</label>
+                        <input type="text" id="location" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
                         <label for="skills" class="form-label">Skills & Expertise</label>
                         <select id="skills" class="form-select" multiple>
-                            <option value="training">Training & Education</option>
+                            <option value="training">Training & Facilitation</option>
                             <option value="mentoring">Mentoring</option>
-                            <option value="it">IT Support</option>
-                            <option value="events">Event Planning</option>
-                            <option value="fundraising">Fundraising</option>
-                            <option value="communications">Communications</option>
+                            <option value="advocacy">Community Advocacy</option>
+                            <option value="psychosocial">Psychosocial Support</option>
+                            <option value="it">Digital / IT Support</option>
+                            <option value="events">Event & Field Coordination</option>
+                            <option value="communications">Communications & Media</option>
+                            <option value="fundraising">Fundraising & Partnerships</option>
                             <option value="translation">Translation</option>
                             <option value="other">Other</option>
                         </select>
                         <small>Hold Ctrl/Cmd to select multiple options</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience" class="form-label">Previous Experience (optional)</label>
+                        <textarea id="experience" class="form-control" style="min-height: 80px;"></textarea>
                     </div>
 
                     <div class="form-group">
